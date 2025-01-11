@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'montserrat', sans-serif;
+  font-weight: 400;
+  color-scheme: light;
+  overflow-x: hidden;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: rgb(245, 245, 245);
+  --accent-color-2: #01796f;
+  --accent-color: #01796f;
+  --text-color: black;
+  --text-alt:white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.space
+{
+    height: 50vh;
+    padding: 20rem;
+}
+
+a { 
+  all: unset;
+}
+a:hover {
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--text-color);
+
+}
+
+.heading
+{
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.text
+{
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+.sub-text
+{
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--text-color);
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width:2560px) and (min-width:1500px) {
+  .heading
+  {
+    font-size: 6rem;
+  }
+  .text
+  {
+    font-size: 2.25rem;
+  }
+  .sub-text
+  {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .heading
+  {
+    font-size: 2.75rem;
+  }
+  
+
+}
+
+@media screen and (max-width:768px) {
+  .heading
+  {
+    font-size: 2.5rem;
+  }
+
+  
+}
+
+@media screen and (max-width:550px) {
+  .heading
+  {
+    font-size: 2.25rem;
+  }
+  .text
+  {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .heading
+  {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width:320px) {
+
+} 

@@ -1,0 +1,93 @@
+.modern-approach-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem 0rem 0rem 4rem;
+    background-color: var(--text-color);
+    color: var(--text-alt);
+    gap: 4rem;
+    height: 100vh;
+  }
+  
+  .modern-approach-container p {
+    color: var(--text-alt) !important;
+  }
+  
+  .modern-approach-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex: 2;
+    text-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  
+  .modern-approach-image {
+    display: flex;
+    width: 55%;
+    height: 100%;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+  }
+  
+  .modern-approach-img {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .modern-approach-image img {
+    
+    object-fit: cover; /* Crops the image to fit the container */
+    filter: grayscale(70%);
+    overflow: hidden;
+    height: 100vh;
+  }
+  
+  @media screen and (max-width: 2560px) and (min-width: 1500px) {
+    .modern-approach-container {
+      padding: 0rem 0rem 0rem 8rem;
+    }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .modern-approach-container {
+      padding: 0rem 0rem 0rem 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .modern-approach-container {
+      padding: 0rem 0rem 0rem 2rem;
+      height: fit-content;
+    }
+
+    .modern-approach-image img
+    {
+      height: 50rem;
+    }
+
+  }
+  
+  @media screen and (max-width: 550px) {
+  }
+  
+  @media screen and (max-width: 400px) {
+      
+  }
+  
+  @media screen and (max-width: 320px) {
+      .modern-approach-container
+      {
+          display: flex;
+          flex-direction: column;
+      }
+      
+  } 
+  

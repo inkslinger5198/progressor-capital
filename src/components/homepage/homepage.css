@@ -1,0 +1,227 @@
+/* src/components/Home.css */
+
+.home-container {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    color: var(--text-alt);
+  }
+  
+  .background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Ensures the video covers the container without distortion */
+  }
+  
+  .content {
+    z-index: 1;
+    color: var(--text-alt); /* Ensure text is visible over the video */
+    height: 100vh;
+    /*backdrop-filter: blur(2px); /* Optional: blur the background for better text readability */
+    background: rgba(0, 0, 0, 0.7); /* Optional: semi-transparent overlay for better text readability */
+  }
+
+  .home-headings
+  {
+    z-index: 1;
+    color: var(--text-alt); /* Ensure text is visible over the video */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    text-align: left;
+    padding: 0rem 4rem;
+
+  }
+
+  .home-headings h1
+  {
+    font-size: 7rem;
+    font-weight: 400;
+    width: 70%;
+    margin: 0;
+  }
+
+  .home-headings h5
+  {
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 1rem 0;
+  }
+
+  .home-headings p
+  {
+    font-size: 1.25rem;
+    font-weight: 200;
+    margin: 0;
+  }
+
+  .content-cta
+  {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1rem 0;
+    height: 2.5rem;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    font-size: 1rem;
+    gap: 0.5rem;
+  }
+
+  .content-cta:hover
+  {
+    cursor: pointer;
+    color: var(--color-accent);
+  }
+
+  .content-cta-icon
+  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    font-size: 1.5rem;
+    padding: 0.25rem;
+    /*border: 1px solid;
+    border-radius: 50%;*/
+  }
+
+  .content-cta-text
+  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+@media screen and (max-width:2560px) and (min-width:1500px) {
+  .home-headings
+  {
+    padding: 0 8rem;
+  }
+
+  .home-headings h1
+  {
+    font-size: 12.5rem;
+    font-weight: 400;
+  }
+
+  .home-headings h5
+  {
+    font-size: 4rem;
+    margin: 2rem 0;
+  }
+
+  .home-headings p
+  {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
+  .content-cta
+  {
+    margin: 2rem 0;
+    height: 5rem;
+    font-size: 2rem;
+    gap: 1rem;
+  }
+
+  .content-cta-icon
+  {
+    font-size: 3rem;
+    padding: 0.5rem;
+  }
+
+}
+
+@media screen and (max-width:1024px) {
+  .home-headings h1
+  {
+    font-size: 5.5rem;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .home-headings
+  {
+    padding: 0 2rem;
+  }
+  .home-headings h1
+  {
+    font-size: 4rem;
+  }
+  .home-headings h5
+  {
+    font-size: 1.5rem;
+  } 
+  .home-headings p
+  {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width:550px) {
+  .home-headings
+  {
+    padding: 0 2rem;
+  }
+  .home-headings h1
+  {
+    font-size: 3rem;
+  }
+  .home-headings h5
+  {
+    font-size: 1.25rem;
+  } 
+  .home-headings p
+  {
+    font-size: 0.75rem;
+  }
+}
+
+@media screen and (max-width:400px) {
+  .home-headings
+  {
+    padding: 0 1rem;
+  }
+  .home-headings h1
+  {
+    font-size: 2.5rem;
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+  .home-headings h5
+  {
+    font-size: 1.25rem;
+    margin: 0.25rem 0 0.25rem 0;
+  } 
+  .home-headings p
+  {
+    font-size: 0.75rem;
+  }
+  .content-cta
+  {
+    margin: 1.5rem 0;
+    height: 2rem;
+    font-size: 1rem;
+    gap: 0rem;
+  }
+}
+
+@media screen and (max-width:320px) {
+  
+}
