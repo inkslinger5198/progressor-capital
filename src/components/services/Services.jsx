@@ -42,16 +42,36 @@ const Services = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [visibleSlides, setVisibleSlides] = useState(3); // Default to showing 3 slides
+
+  const updateVisibleSlides = () => {
+    if (window.matchMedia("(min-width: 1024px)").matches) {
+      setVisibleSlides(3); // Desktop
+    } else if (window.matchMedia("(min-width: 550px) and (max-width: 1023px)").matches) {
+      setVisibleSlides(2); // Tablet
+    } else {
+      setVisibleSlides(1); // Mobile
+    }
+  };
+
+  useEffect(() => {
+    updateVisibleSlides(); // Initial check
+
+    const resizeListener = () => updateVisibleSlides();
+    window.addEventListener("resize", resizeListener);
+
+    return () => window.removeEventListener("resize", resizeListener);
+  }, []);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === servicesData.length - 3 ? 0 : prevIndex + 1
+      prevIndex === servicesData.length - visibleSlides ? 0 : prevIndex + 1
     );
   };
 
   const prevSlide = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? servicesData.length - 3 : prevIndex - 1
+      prevIndex === 0 ? servicesData.length - visibleSlides : prevIndex - 1
     );
   };
 
@@ -78,6 +98,7 @@ const Services = () => {
       }
     };
   }, []);
+
   return (
     <div className="services-container" id="services">
       <div className="services-heading">
@@ -93,11 +114,11 @@ const Services = () => {
         <div className="carousel">
           <div className="services-row" ref={serviceRef}>
             {servicesData
-              .slice(currentIndex, currentIndex + 3)
+              .slice(currentIndex, currentIndex + visibleSlides)
               .map((service, index) => (
                 <div className="service" key={index}>
                   <div className="service-icon">
-                    <img src={service.icon} />
+                    <img src={service.icon} alt={service.title} />
                   </div>
                   <p className="service-title">{service.title}</p>
                   <p className="line"> </p>

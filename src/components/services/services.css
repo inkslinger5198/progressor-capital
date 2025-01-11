@@ -7,33 +7,25 @@
   padding: 4rem 4rem 4rem 4rem;
 }
 
-.services-heading
-{
+.services-heading {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;;
+  width: 100%;
 }
-.limit
-{
+.limit {
   width: 70%;
 }
 
-.services-heading .heading 
-{
-  margin:0;
+.services-heading .heading {
+  margin: 0;
   padding: 0;
 }
 
-.services-heading .text
-{
+.services-heading .text {
   margin-bottom: 0;
 }
-
-
-
-
 
 @keyframes slideDown {
   from {
@@ -122,13 +114,11 @@
   color: var(--text-color);
 }
 
-.service-description
-{
+.service-description {
   height: 10rem;
 }
 
-.service-button
-{
+.service-button {
   display: flex;
   justify-self: flex-end;
 
@@ -136,7 +126,7 @@
   background-color: var(--accent-color-2);
   color: var(--text-alt);
   padding: 0.5rem 1rem;
-  
+
   border-radius: 5px;
 }
 
@@ -180,7 +170,7 @@
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .services-container {
     padding: 3rem;
   }
@@ -194,7 +184,6 @@
     font-size: 2.25rem;
   }
   .service {
-    
   }
   .service-icon img {
   }
@@ -206,16 +195,28 @@
   .line {
     height: 6px;
   }
+
+  .service {
+    flex: 1 0 calc(100% / 2); /* Default 3 items */
+    max-width: calc(100% / 2);
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .limit {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 550px) {
+  .service {
+    flex: 1 0 calc(100%); /* Default 3 items */
+    max-width: calc(100%);
+  }
 }
 
 @media screen and (max-width: 400px) {
 }
 
 @media screen and (max-width: 320px) {
-} 
+}

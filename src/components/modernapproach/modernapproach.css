@@ -76,6 +76,24 @@
   }
   
   @media screen and (max-width: 550px) {
+    .modern-approach-container
+    {
+      display: flex;
+      flex-direction: column-reverse;
+      padding: 0;
+      gap: 0;
+      margin-top: 2rem;
+
+    }
+    .modern-approach-content
+    {
+      padding: 2rem;
+    }
+    .modern-approach-image
+    {
+      width: 100%;
+      height: auto;
+    }
   }
   
   @media screen and (max-width: 400px) {
