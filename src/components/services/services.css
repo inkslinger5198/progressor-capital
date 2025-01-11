@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 4rem 4rem 4rem 4rem;
+  padding: 4rem 4rem 0rem 4rem;
 }
 
 .services-heading {
@@ -52,7 +52,7 @@
 }
 
 .carousel-arrows {
-  margin: 2rem 0 4rem 0;
+  margin: 2rem 0 0rem 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -96,7 +96,6 @@
 .service:hover {
   transform: translateY(-5px);
   transition: transform 0.3s;
-  cursor: pointer;
 }
 .service-icon img {
   height: 3rem;
@@ -130,31 +129,41 @@
   border-radius: 5px;
 }
 
+.service-button:hover {
+  cursor: pointer;
+}
+
 .line {
   width: 30%;
   height: 3px;
   background-color: var(--accent-color-2);
 }
 
-@media screen and (max-width: 2560px) and (min-width: 1500px) {
+@media screen and (max-width: 2560px) and (min-width: 1701px) {
   .services-container {
-    padding: 8rem;
+    padding: 8rem 8rem 0rem 8rem;
   }
   .carousel-container {
     padding: 8rem 0;
+    width: 90%;
   }
   .carousel-arrows {
-    margin: 4rem 0 8rem 0;
+    margin: 4rem 0 0rem 0;
   }
   .carousel-arrow {
     font-size: 5rem;
   }
+  .carousel {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
   .service {
-    margin: 0 2rem;
-    padding: 3rem;
-    height: 42rem;
-
-    box-shadow: 10px 10px 20px 0px #888888;
+    flex: 1 0 calc(100% / 3); /* Default 3 items */
+    width: calc(100% / 3);
+    height: fit-content;
   }
   .service-icon img {
     height: 6rem;
@@ -163,22 +172,79 @@
 
   .service-title {
     font-size: 3rem;
+    height: 6rem;
   }
-
+  .service-description {
+    height: 20rem;
+  }
   .line {
     height: 6px;
   }
 }
+@media screen and (max-width: 1700px) and (min-width: 1441px)
+{
+  .services-container {
+    padding: 8rem 8rem 0rem 8rem;
+  }
+  .carousel-container {
+    padding: 8rem 0;
+    width: 90%;
+  }
+  .carousel-arrows {
+    margin: 4rem 0 0rem 0;
+  }
+  .carousel-arrow {
+    font-size: 5rem;
+  }
+  .carousel {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .service {
+    flex: 1 0 calc(100% / 3); /* Default 3 items */
+    width: calc(100% / 3);
+    height: fit-content;
+  }
+  .service-icon img {
+    height: 6rem;
+    margin-bottom: 2rem;
+  }
+
+  .service-title {
+    font-size: 3rem;
+    height: 6rem;
+  }
+  .service-description {
+    height: 20rem;
+  }
+  .line {
+    height: 6px;
+  }
+  .service-description
+  {
+    height: 25rem;
+  }
+
+  .carousel
+  {
+    width: 100%;
+  }
+
+}
+
 
 @media screen and (max-width: 1023px) {
   .services-container {
-    padding: 3rem;
+    padding: 3rem 3rem 0 3rem;
   }
   .carousel-container {
     padding: 3rem 0;
   }
   .carousel-arrows {
-    margin: 1.75rem 0 3rem 0;
+    margin: 1.75rem 0 0rem 0;
   }
   .carousel-arrow {
     font-size: 2.25rem;
@@ -210,8 +276,8 @@
 
 @media screen and (max-width: 550px) {
   .service {
-    flex: 1 0 calc(100%); /* Default 3 items */
-    max-width: calc(100%);
+    flex: 1 0 calc(90%); /* Default 3 items */
+    max-width: calc(90%);
   }
 }
 

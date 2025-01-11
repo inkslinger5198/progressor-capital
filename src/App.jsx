@@ -4,6 +4,8 @@ import './App.css';
 import Approach from './components/approach/Approach';
 import Services from './components/services/Services';
 import ModernApproach from './components/modernapproach/ModernApproach';
+import About from './components/about/About';
+import Footer from './components/footer/Footer';
 
 const App = () => {
   return (
@@ -12,6 +14,8 @@ const App = () => {
       <Approach />
       <ModernApproach />      
       <Services />
+      <About />
+      <Footer />
     </div>
   )
 }

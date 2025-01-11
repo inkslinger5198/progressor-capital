@@ -6,6 +6,7 @@ import Capital from "../../assets/services/capital.svg";
 import Debt from "../../assets/services/debt.svg";
 import Strategic from "../../assets/services/strategic.svg";
 import Merger from "../../assets/services/mergers.svg";
+import { getCalApi } from "@calcom/embed-react";
 
 const Services = () => {
   const servicesData = [
@@ -47,12 +48,25 @@ const Services = () => {
   const updateVisibleSlides = () => {
     if (window.matchMedia("(min-width: 1024px)").matches) {
       setVisibleSlides(3); // Desktop
-    } else if (window.matchMedia("(min-width: 550px) and (max-width: 1023px)").matches) {
+    } else if (
+      window.matchMedia("(min-width: 550px) and (max-width: 1023px)").matches
+    ) {
       setVisibleSlides(2); // Tablet
     } else {
       setVisibleSlides(1); // Mobile
     }
   };
+
+  useEffect(() => {
+    (async function initializeCalApi() {
+      try {
+        const cal = await getCalApi({ namespace: "progressor-capital-growth-session" });
+        cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
+      } catch (error) {
+        console.error("Cal API Initialization Error:", error);
+      }
+    })();
+  }, []);
 
   useEffect(() => {
     updateVisibleSlides(); // Initial check
@@ -125,7 +139,12 @@ const Services = () => {
                   <p className="service-description sub-text">
                     {service.description}
                   </p>
-                  <button className="service-button sub-text">
+                  <button
+                    data-cal-namespace="progressor-capital-growth-session"
+                    data-cal-link="pravitbh/progressor-capital-growth-session"
+                    data-cal-config='{"layout":"month_view"}'
+                    className="service-button sub-text"
+                  >
                     Learn More
                   </button>
                 </div>
