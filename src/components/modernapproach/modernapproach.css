@@ -60,6 +60,10 @@
     .modern-approach-container {
       padding: 0rem 0rem 0rem 2rem;
     }
+    .modern-approach-image
+    {
+      width: 45%;
+    }
   }
   
   @media screen and (max-width: 768px) {
@@ -67,15 +71,6 @@
       padding: 0rem 0rem 0rem 2rem;
       height: fit-content;
     }
-
-    .modern-approach-image img
-    {
-      height: 50rem;
-    }
-
-  }
-  
-  @media screen and (max-width: 550px) {
     .modern-approach-container
     {
       display: flex;
@@ -92,8 +87,13 @@
     .modern-approach-image
     {
       width: 100%;
-      height: auto;
+      height: 25rem;
     }
+
+  }
+  
+  @media screen and (max-width: 550px) {
+    
   }
   
   @media screen and (max-width: 400px) {
@@ -101,11 +101,6 @@
   }
   
   @media screen and (max-width: 320px) {
-      .modern-approach-container
-      {
-          display: flex;
-          flex-direction: column;
-      }
       
   } 
   
