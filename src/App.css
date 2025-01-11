@@ -2,7 +2,10 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-
+body
+{
+  width: 100vw;
+}
 /* Track */
 ::-webkit-scrollbar {
   width: 5px;
