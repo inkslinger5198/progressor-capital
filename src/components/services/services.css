@@ -191,7 +191,7 @@
     width: 90%;
   }
   .carousel-arrows {
-    margin: 4rem 0 0rem 0;
+    margin: 2rem 0 0rem 0;
   }
   .carousel-arrow {
     font-size: 5rem;
@@ -204,8 +204,8 @@
     justify-content: center;
   }
   .service {
-    flex: 1 0 calc(100% / 3); /* Default 3 items */
-    width: calc(100% / 3);
+    flex: 1 0 30%; /* Default 3 items */
+    max-width: 30%;
     height: fit-content;
   }
   .service-icon img {
@@ -238,18 +238,24 @@
 
 @media screen and (max-width: 1023px) {
   .services-container {
-    padding: 3rem 3rem 0 3rem;
+    padding: 3rem 0rem 0 0rem;
   }
   .carousel-container {
     padding: 3rem 0;
+    
   }
   .carousel-arrows {
     margin: 1.75rem 0 0rem 0;
   }
   .carousel-arrow {
-    font-size: 2.25rem;
+    font-size: 1.5rem;
+  }
+  .services-row {
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .service {
+
   }
   .service-icon img {
   }
@@ -270,14 +276,14 @@
 
 @media screen and (max-width: 768px) {
   .limit {
-    width: 100%;
+    max-width: 100%;
   }
 }
 
 @media screen and (max-width: 550px) {
   .service {
-    flex: 1 0 calc(90%); /* Default 3 items */
-    max-width: calc(90%);
+    flex: 1 0 100; /* Default 3 items */
+    max-width: 100%;
   }
 }
 
