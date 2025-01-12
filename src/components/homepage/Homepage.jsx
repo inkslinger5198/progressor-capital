@@ -25,7 +25,7 @@ const Home = () => {
           <h1>PROGRESSOR CAPITAL</h1>
           <h5>Strategic Capital Advisors & Growth Partners</h5>
           <p>Forging Elite Networks for Visionary Leaders </p>
-          <Link to ="approach" smooth={true} duration={1000} offset={-70} >
+          <Link to ="approach" smooth={true} duration={50} offset={-70} >
             <div className="content-cta">
               <div className="content-cta-icon"><MdOutlineKeyboardDoubleArrowRight className="home-arrow" /></div>
               <div className="content-cta-text"><div>Our Expertise</div></div>
