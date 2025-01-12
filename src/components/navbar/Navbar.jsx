@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getCalApi } from "@calcom/embed-react";
-// import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import "./navbar.css";
@@ -10,9 +10,9 @@ const Menu = () => (
     <ScrollLink to="services" smooth={true} duration={50} offset={-70}>
       <p>Services</p>
     </ScrollLink>
-    <ScrollLink to="about" smooth={true} duration={50} offset={-70}>
-      <p>About</p>
-    </ScrollLink>
+    <RouterLink to="/profile">
+      <p>Profile</p>
+    </RouterLink>
     <button
       className="cal-button navbar-laptop"
       data-cal-namespace="progressor-capital-growth-session"
@@ -29,9 +29,9 @@ const Phone_menu = () => (
     <ScrollLink to="services" smooth={true} duration={50} offset={-70}>
       <p>Services</p>
     </ScrollLink>
-    <ScrollLink to="about" smooth={true} duration={50} offset={-70}>
-      <p>About</p>
-    </ScrollLink>
+    <RouterLink to="/profile">
+      <p>Profile</p>
+    </RouterLink>
     <a
       href="https://cal.com/pravitbh/progressor-capital-growth-session"
       target="_blank"
